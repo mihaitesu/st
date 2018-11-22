@@ -1,0 +1,63 @@
+{% extends "service_domain_catalog_base.html" %}
+
+{% block content %}
+<div class="row">
+	<div class="col-sm-8">
+		
+		
+		
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link disabled  px-0" href="#">Cautare: "kjdnhj"</a>
+  </li>
+  <li class="nav-item dropdown ml-auto">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+	<span class="fa fa-navicon"></span>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-start">
+      <a class="dropdown-item" href="#">Unitati de cazare</a>
+      <a class="dropdown-item" href="#">Baruri si restaurante</a>
+      <a class="dropdown-item" href="#">Atractii turistice</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Destinatii</a>
+    </div>
+  </li>
+</ul>
+		
+		
+		{{page_content|raw}}
+		
+		<br>
+		<hr>
+		<h4><a href="" class="text-primary" style="text-decoration:none;">Pensiunea Demo</a></h4>
+		<span class="text-muted">Brasov, Romania</span><br><br>
+		<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea...
+		</p>
+		<a href="" class="text-success">http://pensiuneademo.ro</a>
+		<hr>
+		
+		
+		
+		
+	</div>
+	<div class="col-sm-4">
+		
+		
+		
+<div class="card bg-dark text-white">
+  <div class="card-body">
+    <h4 class="card-title">Card title</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link text-secondary">Card link</a>
+    <a href="#" class="card-link text-secondary">Another link</a>
+  </div>
+</div>
+		
+		
+		
+		
+	</div>
+</div>
+{% endblock %}

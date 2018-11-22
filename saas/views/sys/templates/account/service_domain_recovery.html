@@ -1,0 +1,26 @@
+{% extends "service_domain_account.html" %}
+
+
+{% block text_description %}{{recovery.text_description}}{% endblock %}
+{% block text_title %}{{recovery.text_title}}{% endblock %}
+
+
+{% block account_content %}
+<form method="post" action="{{recovery.recovery_form_action}}">
+	<fieldset>
+		<div class="form-group">
+			<input class="form-control" placeholder="{{recovery.input_email_placeholder}}" type="email">
+			<small class="form-text text-muted">We'll never share your email with anyone else.</small>
+		</div>
+		
+		<label for="input_captcha"><img src="{{base.url_captcha_img}}" id="captcha_img" data-toggle="tooltip" data-placement="right" title="{{base.text_captcha_img}}"></label>
+		<div class="form-group">
+			<input class="form-control" placeholder="{{base.input_captcha_placeholder}}" type="text" id="input_captcha">
+		</div>
+		<button type="submit" class="btn btn-block btn-primary">{{recovery.text_input_submit}}</button>
+	</fieldset>
+</form>
+<div class="text-center mt-5">
+	<a href="{{recovery.url_login}}">{{recovery.text_login}}</a>
+</div>
+{% endblock %}

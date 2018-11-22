@@ -1,0 +1,40 @@
+{% extends "service_domain_account.html" %}
+
+
+{% block text_description %}{{register.text_description}}{% endblock %}
+{% block text_title %}{{register.text_title}}{% endblock %}
+
+
+{% block account_content %}
+<form method="post" action="{{register.register_form_action}}">
+	<fieldset>
+		<div class="form-group">
+			<input class="form-control" placeholder="{{register.input_email_placeholder}}" type="email">
+		</div>
+		<div class="form-group">
+			<input class="form-control" placeholder="{{register.input_password_placeholder}}" type="password">
+		</div>
+		<div class="form-group">
+			<input class="form-control" placeholder="{{register.input_conf_password_placeholder}}" type="password">
+		</div>
+		
+		<div class="form-group">
+			<div class="custom-control custom-checkbox">
+				<input class="custom-control-input" id="customCheck1" type="checkbox">
+				<label class="custom-control-label" for="customCheck1">Sunt de acord cu Termenii și condițiile și cu Politica de confidențialitate ale Stack Travel</label>
+			</div>
+		</div>
+		
+		
+		<label for="input_captcha"><img src="{{base.url_captcha_img}}" id="captcha_img" data-toggle="tooltip" data-placement="right" title="{{base.text_captcha_img}}"></label>
+		<div class="form-group">
+			<input class="form-control" placeholder="{{base.input_captcha_placeholder}}" type="text" id="input_captcha">
+		</div>
+		<button type="submit" class="btn btn-block btn-success">{{register.text_input_submit}}</button>
+	</fieldset>
+</form>
+<div class="text-center mt-5">
+	<span class="text-muted">{{register.text_existing_account}}</span>
+	<a href="{{register.url_login}}">{{register.text_login}}</a>
+</div>
+{% endblock %}

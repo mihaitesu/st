@@ -1,0 +1,33 @@
+{% extends "service_domain_account.html" %}
+
+
+{% block text_description %}{{login.text_description}}{% endblock %}
+{% block text_title %}{{login.text_title}}{% endblock %}
+
+
+{% block account_content %}
+<form method="post" action="{{login.login_form_action}}">
+
+<!--
+<div class="alert alert-dismissible alert-danger">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+</div>
+-->
+	
+	<fieldset>
+		<div class="form-group">
+			<input class="form-control" placeholder="{{login.input_email_placeholder}}" type="email">
+		</div>
+		<div class="form-group">
+			<input class="form-control" placeholder="{{login.input_password_placeholder}}" type="password">
+		</div>
+		<button type="submit" class="btn btn-block btn-primary">{{login.text_input_submit}}</button>
+	</fieldset>
+</form>
+<div class="text-center mt-5">
+	<a href="{{login.url_register}}">{{login.text_register}}</a>
+	<br><small class="text-muted">{{login.text_or}}</small><br>
+	<a href="{{login.url_recover}}">{{login.text_recover}}</a>
+</div>
+{% endblock %}

@@ -1,0 +1,82 @@
+@import url("fa.min.css");
+@import url("ti.min.css");
+@font-face {
+	font-family: 'st';
+	src: url('../../fonts/st/st.eot');
+	src: url('../../fonts/st/st.woff2') format('woff2'),
+		url('../../fonts/st/st.woff') format('woff'),
+		url('../../fonts/st/st.ttf') format('truetype'),
+		url('../../fonts/st/st.svg#st') format('svg'),
+		url('../../fonts/st/st.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.navbar-shadow { box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3); }
+.text-logo, a.text-logo { font-family: st; text-decoration: none; line-height: 100%; }
+.input_q, .submit_q { border-color: #fff !important; }
+.input_q::placeholder { font-style: italic; }
+
+
+
+/*----------------------*/
+.bg-img, .bg-img-opacity::after, .bg-img-opacity-nav::after {
+	background-image: url("../../img/sys/bg_imgz.jpg");
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.bg-img-opacity::after, .bg-img-opacity-nav::after {
+	content : "";
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	z-index: -1;
+}
+.bg-img-opacity-nav::after {
+	position: absolute !important;
+}
+/*----------------------*/
+
+
+
+
+
+
+.bg-gradient {
+	background-color: #222;
+	background-image: linear-gradient(90deg, rgba(143,59,27,.9), rgba(143,59,27,0) 90%),
+			  linear-gradient(30deg, rgba(102,141,60,.9), rgba(102,141,60,0) 70%),
+			  linear-gradient(180deg, rgba(78,97,114,.9), rgba(78,97,114,0) 90%);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+
+/* fade without slide-down */
+.modal.fade .modal-dialog {
+	-moz-transition: none !important;
+	-o-transition: none !important;
+	-webkit-transition: none !important;
+	transition: none !important;
+	-moz-transform: none !important;
+	-ms-transform: none !important;
+	-o-transform: none !important;
+	-webkit-transform: none !important;
+	transform: none !important;
+}
+
